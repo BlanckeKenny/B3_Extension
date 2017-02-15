@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LibExtension;
 
 namespace ConsExtension
 {
@@ -10,8 +7,11 @@ namespace ConsExtension
     {
         static void Main(string[] args)
         {
-            string email = "extension.method@visualstudio.net";
-            Console.WriteLine($"{email} is emailadres: {email.IsValidEmailAddress()}");
+            string[] animals = { "monkey", "bear", "rabbit", "wolf" };
+            if ("bear".In(animals))
+                Console.WriteLine($"Found the animal!");
+            else
+                Console.WriteLine("No such animal.");
             Console.ReadKey();
         }
     }
