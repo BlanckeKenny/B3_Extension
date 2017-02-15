@@ -1,5 +1,6 @@
 ﻿using System;
 using LibExtension;
+using System.Linq;
 
 namespace ConsExtension
 {
@@ -8,10 +9,11 @@ namespace ConsExtension
         static void Main(string[] args)
         {
             string[] animals = { "monkey", "bear", "rabbit", "wolf" };
-            if ("bear".In(animals))
-                Console.WriteLine($"Found the animal!");
-            else
-                Console.WriteLine("No such animal.");
+            var fourLetterAnimals = animals.Where(a => a.Length == 4);
+            foreach(string animal in fourLetterAnimals)
+            {
+                Console.WriteLine($"{animal} has 4 letters.");
+            }
             Console.ReadKey();
         }
     }
