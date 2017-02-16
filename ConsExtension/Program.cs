@@ -1,5 +1,4 @@
 ﻿using System;
-using LibExtension;
 using System.Linq;
 
 namespace ConsExtension
