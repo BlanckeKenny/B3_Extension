@@ -7,11 +7,13 @@ namespace ConsExtension
     {
         static void Main(string[] args)
         {
-            string[] animals = { "monkey", "bear", "rabbit", "wolf" };
-            if ("bear".In(animals))
-                Console.WriteLine($"Found the animal!");
-            else
-                Console.WriteLine("No such animal.");
+            int number = 10;
+            Console.WriteLine($"{number} is{(number.IsOdd() ? "" : "n't")} odd.");
+
+
+            string line = "This is a line of text";
+            char c = 'i';
+            Console.WriteLine($"'{line}':  found '{c}' {line.CountChar(c)} time(s).");
             Console.ReadKey();
         }
     }

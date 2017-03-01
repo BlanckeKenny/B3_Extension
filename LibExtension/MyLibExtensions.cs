@@ -13,5 +13,22 @@ namespace LibExtension
             }
             return false;
         }
+
+        public static bool IsOdd(this int i)
+        {
+            return i % 2 != 0;
+        }
+
+        public static int CountChar(this string s, char c)
+        {
+            int count = 0;
+            foreach(char ch in s)
+            {
+                if (ch == c) count++;
+            }
+            return count;
+        }
+
+        
     }
 }
